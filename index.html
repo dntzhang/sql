@@ -1,0 +1,71 @@
+<script src="sql.js"></script>
+
+<script>
+  function Sql(table) {
+
+    this.table = table
+
+  }
+
+  Sql.prototype = {
+    update: function () { },
+    query: function () { },
+    add: function () {
+
+    },
+    where: function () {
+
+    },
+    count: function () {
+
+    },
+    orderby: function () { },
+    groupby: function () { },
+  }
+
+
+  var $ = function (table) {
+    return new Sql(table)
+  }
+
+  $.eq = function () {
+
+  }
+
+  $.neq = function () {
+
+  }
+
+
+  $.gt = function () {
+
+  }
+
+  $.lt = function () {
+
+  }
+
+  $.findInSet = function (el, set) {
+    return `FIND_IN_SET("${el}", "${set}")`
+  }
+
+  $.like = function () {
+
+  }
+
+  $.now = function(){
+    return 'NOW()'
+  }
+</script>
+<script>
+  //https://www.runoob.com/mysql/mysql-operator.html
+  $('user').update('key', 'value').update('key', 'value')
+
+
+  $('user').query('a', 'b')
+  $('user').add({
+
+  }).exec().then()
+
+  $('user').where($.eq('a', 'b'))
+</script>
